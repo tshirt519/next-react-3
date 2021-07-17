@@ -8,16 +8,17 @@ import { useEffect, useState, useCallback } from 'react';
 export default function Home() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("");
+  const [isShow, setIsShow] = useState(true);
   const [array, setArray] = useState([]);
   
   const handleClick = useCallback(() => {
     if (count < 10) {
-      setCount((count) => count + 1);
+      setCount((prevCount) => prevCount + 1);
     }
   }, [count]);
 
   const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => isShow ? false : true);
+    setIsShow((prevIsShow) => prevIsShow ? false : true);
   }, []);
 
   const handleChange = useCallback((e) => {
@@ -37,6 +38,7 @@ export default function Home() {
       return [...prevArray, text];
     });
   }, [text]);
+
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
     return () => {
