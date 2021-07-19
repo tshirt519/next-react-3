@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
 export const useInputArray = () => {
   const [text, setText] = useState("");
@@ -22,5 +22,5 @@ export const useInputArray = () => {
     });
   }, [text]);
 
-  return { text, array, handleChange, handleAdd }
+  return { text, array, handleChange, handleAdd };
 };

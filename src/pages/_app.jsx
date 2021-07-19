@@ -1,8 +1,8 @@
-import 'src/styles/globals.css';
-import Head from 'next/head';
-import { useCounter } from 'src/hooks/useCounter';
-import { useInputArray } from 'src/hooks/useInputArray';
-import { useBgColor } from 'src/hooks/useBgColor';
+import "src/styles/globals.css";
+import Head from "next/head";
+import { useCounter } from "src/hooks/useCounter";
+import { useInputArray } from "src/hooks/useInputArray";
+import { useBgColor } from "src/hooks/useBgColor";
 
 const MyApp = ({ Component, pageProps }) => {
   const counter = useCounter();
@@ -18,6 +18,6 @@ const MyApp = ({ Component, pageProps }) => {
       <Component {...pageProps} {...counter} {...inputArray} />
     </>
   );
-}
+};
 
 export default MyApp;
