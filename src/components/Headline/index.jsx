@@ -8,8 +8,11 @@ export function Headline(props) {
       </h1>
 
       <p className={classes.description}>
-        Get started by editing {props.children}
+        itemの数は {props.children} です
       </p>
+
+      <button onClick={props.handleReduce}>減らす</button>
+
 
     </div> 
   );
