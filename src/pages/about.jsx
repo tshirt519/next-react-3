@@ -25,7 +25,6 @@ export default function About({
       <Main page="about" />
 
       {isShow ? <h1>{doubleCount}</h1> : null}
-      <hr />
 
       <button onClick={handleClick}>カウント</button>
       <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
