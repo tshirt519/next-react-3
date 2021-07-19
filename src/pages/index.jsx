@@ -5,7 +5,16 @@ import { Main } from 'src/components/Main';
 import { Header } from 'src/components/Header';
 
 export default function Home(props) {
-  const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd } = props;
+  const { 
+    count, 
+    isShow, 
+    handleClick, 
+    handleDisplay, 
+    text, 
+    array, 
+    handleChange, 
+    handleAdd 
+  } = props;
 
   return (
     <div className={styles.container}>
