@@ -8,18 +8,20 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "end":
+    case "end": {
       return {
         ...state,
         data: action.data,
         loading: false,
       };
-    case "error":
+    }
+    case "error": {
       return {
         ...state,
         loading: false,
         error: action.error,
       };
+    }
     default: {
       throw new Error("no such an action type!");
     }
@@ -36,8 +38,7 @@ export const Posts = () => {
         throw new Error("エラーが発生したため、データの取得に失敗しました。");
       }
       const json = await res.json();
-      dispatch({ type: "end", data: "json" });
-      
+      dispatch({ type: "end", data: json });
     } catch (error) {
       dispatch({ type: "error", error });
     }
