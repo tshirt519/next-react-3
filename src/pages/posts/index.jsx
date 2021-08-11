@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { CommentsComponent } from "src/components/Comments";
 import { Header } from "src/components/Header";
 import { Posts as PostsComponent } from "src/components/Posts";
 
