@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Header } from "src/components/Header";
+import { CommentsComponent } from "src/components/Comments";
 
 const Comments = () => {
   return (
@@ -8,6 +9,7 @@ const Comments = () => {
         <title>Comments Page</title>
       </Head>
       <Header />
+      <CommentsComponent />
     </div>
   );
 };

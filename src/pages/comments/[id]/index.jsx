@@ -1,7 +1,7 @@
-import { CommentComponent } from "src/components/Comment";
 import { Header } from "src/components/Header";
+import { CommentComponent } from "src/components/Comment";
 
-const CommentsId = () => {
+const Comment = () => {
   return (
     <div>
       <Header />
@@ -10,4 +10,4 @@ const CommentsId = () => {
   );
 };
 
-export default CommentsId;
+export default Comment;
