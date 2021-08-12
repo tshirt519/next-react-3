@@ -1,6 +1,7 @@
+import { PostsByUserId } from "src/components/Posts/PostsByUserId";
 import { useUser } from "src/hooks/useUser";
 
-export const UserComponent = () => { 
+export const UserComponent = () => {
   const { data, error, isLoading } = useUser();
 
   if (isLoading) {
@@ -21,6 +22,7 @@ export const UserComponent = () => {
         <li>{data.website}</li>
         <li>{data.company.name}</li>
       </ul>
+      <PostsByUserId id={data.id} />
     </div>
   );
 };
